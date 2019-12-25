@@ -1,0 +1,20 @@
+{
+  "name": "tindev-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mathvalenza/tindev-api.git",
+  "author": "Valenza <matheusvvalenza@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "mongoose": "^5.6.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
