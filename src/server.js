@@ -19,7 +19,15 @@ io.on('connection', socket => {
 });
 
 mongoose.connect('mongodb+srv://user:user@cluster0-4er0j.mongodb.net/tindev?retryWrites=true&w=majority',
-  { useNewUrlParser: true, useUnifiedTopology: true });
+  { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    app.use(cors());
+    app.use(express.json());
+    app.use(routes);
+    
+    server.listen(3333);
+  })
+  .catch((e) => console.error(e));
 
 app.use((req, res, next) => {
   req.io = io;
@@ -31,5 +39,3 @@ app.use((req, res, next) => {
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-
-server.listen(3333);
