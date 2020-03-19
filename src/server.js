@@ -14,8 +14,6 @@ io.on('connection', socket => {
   const { user } = socket.handshake.query; 
 
   connectedUsers[user] = socket.id;
-
-  console.log('nova conexão: ', user, socket.id);
 });
 
 mongoose.connect('mongodb+srv://user:user@cluster0-4er0j.mongodb.net/tindev?retryWrites=true&w=majority',
