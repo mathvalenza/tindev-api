@@ -17,6 +17,12 @@ See here [front-end](https://github.com/mathvalenza/tindev-frontend) and [mobile
 
 ## Running
 
+First, install it with
+
+### `yarn install`
+
+Then run it with
+
 ### `yarn dev`
 
-Runs the api in the development mode on `http://localhost:3333`
+Wich runs the api in the development mode on `http://localhost:3333`
